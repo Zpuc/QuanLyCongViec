@@ -7,9 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// ==========================================
-// 1. ĐỊNH NGHĨA CÁC KIỂU ENUM
-// ==========================================
+
 
 enum SystemRole {
   ADMIN
@@ -30,9 +28,6 @@ enum TaskPriority {
   URGENT
 }
 
-// ==========================================
-// 2. CÁC BẢNG DỮ LIỆU (MODELS)
-// ==========================================
 
 // Bảng Người dùng
 model User {

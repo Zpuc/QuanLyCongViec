@@ -18,5 +18,11 @@ export class CreateProjectDto {
     @Matches(/^[A-Z0-9]{2,10}$/, {
         message: 'Mã dự án (key) phải từ 2-10 ký tự, chỉ gồm chữ IN HOA và số (VD: WEB, ECOM)',
     })
-    key: string
+    key: string;
+
+    @ApiPropertyOptional({ example: 'Dự án xây dựng website bán hàng trực tuyến' })
+    @IsOptional()
+    @IsString()
+    description?: string;
+
 }
